@@ -13,16 +13,16 @@
                 @csrf
 
                 <div class="flex flex-col">
-                    <label class="text-gray-500" for="voornaam">E-mailadres: *</label>
-                    <input name="email" value="{{ old('email') }}" type="email" class="bg-white border border-gray-500 px-4 py-2 @error('email') border-red-500 @enderror">
+                    <label class="text-gray-500" for="email">E-mailadres: *</label>
+                    <input id="email" name="email" value="{{ old('email') }}" type="email" class="bg-white border border-gray-500 px-4 py-2 @error('email') border-red-500 @enderror">
                     @error('email')
                     <p class="text-red-500">{{ $message }}</p>
                     @enderror
                 </div>
 
                 <div class="flex flex-col">
-                    <label class="text-gray-500" for="voornaam">Wachtwoord: *</label>
-                    <input name="password" type="password" class="bg-white border border-gray-500 px-4 py-2 @error('password') border-red-500 @enderror">
+                    <label class="text-gray-500" for="password">Wachtwoord: *</label>
+                    <input id="password" name="password" type="password" class="bg-white border border-gray-500 px-4 py-2 @error('password') border-red-500 @enderror">
                     @error('password')
                     <p class="text-red-500">{{ $message }}</p>
                     @enderror
