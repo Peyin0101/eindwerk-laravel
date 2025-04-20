@@ -10,14 +10,25 @@ class Product extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'available_sizes', 'price', 'brand_id', 'description', 'image'
+        'name',
+        'available_sizes',
+        'price',
+        'brand_id',
+        'description',
+        'image'
     ];
 
     protected $casts = [
         'available_sizes' => 'array',
     ];
 
-    public function brand() {
+    public function brand()
+    {
         return $this->belongsTo(Brand::class);
+    }
+
+    public function favorites()
+    {
+        return $this->belongsToMany(User::class, 'favorites', 'product_id', 'user_id');
     }
 }

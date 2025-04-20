@@ -12,36 +12,48 @@
             @csrf
             <div class="flex flex-col">
                 <label class="text-gray-500" for="voornaam">Voornaam: *</label>
-                <input name="voornaam" type="text" class="bg-white border border-gray-500 px-4 py-2">
-                <p class="text-red-500">Dit is een foutmelding.</p>
+                <input name="voornaam" type="text" class="bg-white border border-gray-500 px-4 py-2" value="{{ old('voornaam') }}">
+                @error('voornaam')
+                <p class="text-red-500">{{ $message }}</p>
+            @enderror
             </div>
             <div class="flex flex-col">
                 <label class="text-gray-500" for="achternaam">Achternaam: *</label>
-                <input name="naam" type="text" class="bg-white border border-gray-500 px-4 py-2">
-                <p class="text-red-500">Dit is een foutmelding.</p>
+                <input name="naam" type="text" class="bg-white border border-gray-500 px-4 py-2" value="{{ old('naam') }}>
+                @error('naam')
+                    <p class="text-red-500">{{ $message }}</p>
+                @enderror
             </div>
             <div class="grid grid-cols-5 gap-4">
                 <div class="flex flex-col col-span-4">
                     <label class="text-gray-500" for="straat">Straat: *</label>
-                    <input name="straat" type="text" class="bg-white border border-gray-500 px-4 py-2">
-                    <p class="text-red-500">Dit is een foutmelding.</p>
+                    <input name="straat" type="text" class="bg-white border border-gray-500 px-4 py-2" value="{{ old('straat') }}>
+                @error('straat')
+                    <p class="text-red-500">{{ $message }}</p>
+                @enderror
                 </div>
                 <div class="flex flex-col">
                     <label class="text-gray-500" for="huisnummer">Huisnummer: *</label>
-                    <input name="huisnummer" type="text" class="bg-white border border-gray-500 px-4 py-2">
-                    <p class="text-red-500">Dit is een foutmelding.</p>
+                    <input name="huisnummer" type="text" class="bg-white border border-gray-500 px-4 py-2" value="{{ old('huisnummer') }}">
+                    @error('huisnummer')
+                    <p class="text-red-500">{{ $message }}</p>
+                @enderror
                 </div>
             </div>
             <div class="grid grid-cols-5 gap-4">
                 <div class="flex flex-col">
                     <label class="text-gray-500" for="postcode">Postcode: *</label>
-                    <input name="postcode" type="text" class="bg-white border border-gray-500 px-4 py-2">
-                    <p class="text-red-500">Dit is een foutmelding.</p>
+                    <input name="postcode" type="text" class="bg-white border border-gray-500 px-4 py-2" value="{{ old('postcode') }}>
+                                        @error('postcode')
+                        <p class="text-red-500">{{ $message }}</p>
+                    @enderror
                 </div>
                 <div class="flex flex-col col-span-4">
                     <label class="text-gray-500" for="woonplaats">Woonplaats: *</label>
-                    <input name="woonplaats" type="text" class="bg-white border border-gray-500 px-4 py-2">
-                    <p class="text-red-500">Dit is een foutmelding.</p>
+                    <input name="woonplaats" type="text" class="bg-white border border-gray-500 px-4 py-2" value="{{ old('woonplaats') }}>
+                @error('woonplaats')
+                    <p class="text-red-500">{{ $message }}</p>
+                @enderror
                 </div>
             </div>
             <div>

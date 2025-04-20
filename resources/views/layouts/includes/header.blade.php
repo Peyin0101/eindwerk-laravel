@@ -17,7 +17,7 @@
             <a href="{{ route('favorites') }}"><i class="fa-solid fa-heart"></i></a>
             <a href="{{ route('cart') }}" class="bg-gray-200 px-4 py-1 rounded-full">
                 <i class="fa-solid fa-cart-shopping"></i>
-                <span>3 items</span>
+                <span>{{ session('cart_items', 0) }} items</span>
             </a>
         </div>
     </div>
